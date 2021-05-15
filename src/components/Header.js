@@ -8,7 +8,6 @@ import { useSelector } from 'react-redux';
 const Header = () => {
     const [burgerStatus, setBurgerStatus] = useState(false);
     const cars = useSelector(selectCars);
-    console.log(cars);
 
     return (
         <Container>
@@ -30,7 +29,7 @@ const Header = () => {
                     <CustomClose onClick={() => setBurgerStatus(false)} />
                 </CloseWrapper>
                 {cars && cars.map((car, index) =>
-                    <li><a key={index} href="#">{car}</a></li>
+                    <li key={index}><a href="#">{car}</a></li>
                 )}
                 <li><a href="#">Existing Iventory</a></li>
                 <li><a href="#">Used Inventory</a></li>
@@ -41,7 +40,7 @@ const Header = () => {
             </BurgerNav>
         </Container>
     )
-}
+};
 
 export default Header;
 
@@ -56,7 +55,7 @@ const Container = styled.div`
     left: 0;
     right: 0;
     z-index: 1;
-`
+`;
 
 const Menu = styled.div`
     display: flex;
@@ -74,7 +73,7 @@ const Menu = styled.div`
     @media(max-width: 768px) {
         display: none;
     }
-`
+`;
 
 const RightMenu = styled.div`
     display: flex;
@@ -85,11 +84,11 @@ a{
         margin-right: 10px;
     }
 
-`
+`;
 
 const CustomMenu = styled(MenuIcon)`
     cursor: pointer;
-`
+`;
 
 const BurgerNav = styled.div`
         position: fixed;
@@ -116,14 +115,14 @@ const BurgerNav = styled.div`
             }
         }
 
-`
+`;
 
 const CustomClose = styled(CloseIcon)`
     cursor: pointer;
-`
+`;
 
 const CloseWrapper = styled.div`
     display: flex;
     justify-content: flex-end;
     
-`
+`;
