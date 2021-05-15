@@ -51,7 +51,7 @@ const Home = () => {
                 title="Accessories"
                 description=""
                 backgroundImg="accessories.jpg"
-                leftBtnText="Show now"
+                leftBtnText="Shop now"
             />
         </Container>
     )
